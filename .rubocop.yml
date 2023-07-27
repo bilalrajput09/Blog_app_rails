@@ -5,6 +5,10 @@ AllCops:
     - 'Rakefile'
     - 'node_modules/**/*'
     - "bin/bundle"
+    - "bin/importmap"
+    - "bin/rails"
+    - "bin/rake"
+    - "bin/setup"
     - "db/schema.rb"
 
   DisplayCopNames: true
