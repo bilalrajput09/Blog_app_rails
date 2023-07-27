@@ -1,4 +1,3 @@
-# rubocop:disable all
 #!/usr/bin/env ruby.exe
 require 'fileutils'
 
@@ -32,4 +31,3 @@ FileUtils.chdir APP_ROOT do
   puts "\n== Restarting application server =="
   system! 'bin/rails restart'
 end
-# rubocop:enable all
