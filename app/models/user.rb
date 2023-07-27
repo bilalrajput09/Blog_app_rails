@@ -8,7 +8,6 @@ class User < ApplicationRecord
   has_many :likes, foreign_key: :author_id,
                    dependent: :destroy
 
-
   def recent_3_posts
     posts.last(3).reverse
   end
