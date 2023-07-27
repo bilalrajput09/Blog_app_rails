@@ -1,2 +1,21 @@
 class User < ApplicationRecord
+
+    has_many :comments, foreign_key: :author_id,
+     dependent: :destroy
+
+    has_many :posts,foreign_key: :author_id,
+     dependent: :destroy
+
+    has_many :likes,foreign_key: :author_id,
+     dependent: :destroy
+
+
+     def recent_3_posts
+       posts.last(3).reverse
+     end
+
+     def update_post_counter
+        posts_counter += 1
+     end
+
 end
