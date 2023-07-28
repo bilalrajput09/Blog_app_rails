@@ -34,4 +34,19 @@ RSpec.describe Post, type: :model do
     post.increment_posts_counter
     expect(post.author.posts_counter).to eq(2)
   end
+
+  it 'Should return last 5 comments' do
+    post = Post.new(author_id: 1, title: 'First post', text: 'This is the first post', comments_counter: 0,
+                    likes_counter: 1)
+    post.save
+    comment = Comment.new(id: 1, author_id: 1, post_id: post.id, text: 'Hi tom')
+    post.comments << comment
+    post.comments << comment
+    post.comments << comment
+    post.comments << comment
+    post.comments << comment
+    post.comments << comment
+
+    expect(post.return_5_recent_comments).to eq(post.comments.last(5).reverse)
+  end
 end
