@@ -1,1 +1,42 @@
 @import 'semantic-ui';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+.nav_list {
+  display: flex;
+  padding: 1em 3em;
+  justify-content: center;
+  list-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: aliceblue;
+}
+
+.nav_items {
+  margin: 0 1em;
+}
+
+.main_page_conatiner {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em auto;
+  max-width: 80vw;
+  border-bottom: 2px solid rgb(168, 159, 159);
+}
+
+.image_container img {
+  width: 100%;
+}
+
+.user_details_container {
+  width: 80%;
+  margin-left: 1em;
+}
+
+strong {
+  font-size: 20px;
+}
