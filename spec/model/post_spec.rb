@@ -27,12 +27,12 @@ RSpec.describe Post, type: :model do
     user.save
     post = Post.new(author_id: user.id, title: 'First post', text: 'This is the first post', comments_counter: 0,
                     likes_counter: 1)
-    expect(post.author.posts_counter).to eq(0)
+    expect(post.user.posts_counter).to eq(0)
     post.save
-    expect(post.author.posts_counter).to eq(1)
+    expect(post.user.posts_counter).to eq(1)
     expect(post.valid?).to eq(true)
     post.increment_posts_counter
-    expect(post.author.posts_counter).to eq(2)
+    expect(post.user.posts_counter).to eq(2)
   end
 
   it 'Should return last 5 comments' do
