@@ -16,16 +16,24 @@
   background-color: aliceblue;
 }
 
-.nav_items {
+.nav_items a {
   margin: 0 1em;
+  color: black;
+}
+
+.main_container {
+  max-width: 80vw;
+  margin: 0 auto;
 }
 
 .main_page_conatiner {
   display: flex;
   justify-content: space-between;
   margin: 1em auto;
-  max-width: 80vw;
   border-bottom: 2px solid rgb(168, 159, 159);
+}
+.comments_likes_container {
+  float: right;
 }
 
 .image_container img {
@@ -34,9 +42,28 @@
 
 .user_details_container {
   width: 80%;
-  margin-left: 1em;
+  margin: 0 auto;
 }
 
 strong {
+  font-size: 18px;
+}
+
+.See_all_post_btn {
+  display: flex;
+  justify-content: center;
+}
+
+.See_all_post_btn a {
+  padding: 1em 2em;
   font-size: 20px;
+  color: black;
+  background-color: rgb(201, 196, 190);
+  margin: 2em;
+  border-radius: 10px;
+}
+
+.comments_container {
+  list-style: none;
+  margin-top: 4em;
 }

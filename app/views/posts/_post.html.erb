@@ -1,0 +1,22 @@
+<article class="main_page_conatiner">
+    <div class="user_details_container">
+        <h1>
+            Post #<%= post.id%>
+        </h1>
+        <p>
+        <strong class="bio">Title: </strong> <%= post.text %>
+        <br>
+        <strong class="bio">Text: </strong> <%= post.text %>
+        </p>
+        <div class="see_profile_container">
+            <%= link_to "See post", user_post_path(user_id: post.user.id, id: post.id)%>
+        </div>
+        <div  class="comments_likes_container">
+            <p>Comments: <%= post.comments_counter %></p>
+            <p>Likes: <%= post.likes_counter %></p>
+        </div>
+        <ul class="comments_container">
+            <%= render post.comments%>
+        </ul>
+    </div>
+</article>

@@ -1,0 +1,17 @@
+<article class="main_page_conatiner">
+    <div class="image_container">
+        <%= image_tag "image_1.jpg", height: 200 %>
+    </div>
+    <div class="user_details_container">
+        <h1>
+            <%= user.name%>
+        </h1>
+        <p>
+        <strong class="bio">Bio: </strong> <%= user.bio %>
+        </p>
+        <div class="see_profile_container">
+            <p>Number of posts: <%= user.posts.length %></p>
+            <%= link_to "See profile", user_path(user.id)%>
+        </div>
+    </div>
+</article>
