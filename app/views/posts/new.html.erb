@@ -1,5 +1,6 @@
-<h1>Create Post</h1>
-<%= form_with model: @post, url: user_posts_path, method: :post do |f| %>
+
+<%= form_with model: @post, url: user_posts_path, method: :post, html: { class: "form_container"} do |f| %>
+
     <%= f.label :Title%> <br>
     <%= f.text_field :title%> <br>
     <%= f.label :Description%> <br>

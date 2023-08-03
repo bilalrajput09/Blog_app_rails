@@ -18,5 +18,11 @@
         <ul class="comments_container">
             <%= render post.return_5_recent_comments%>
         </ul>
+        <br>
+            <%= form_with model: @comment, url: user_post_comments_path(user_id: post.user.id,post_id: post.id), method: :post do |f|%>
+                <%= f.text_field :comment %>
+                <%= f.submit "Add comment" %>
+            <% end %>
+        <br>
     </div>
 </article>
