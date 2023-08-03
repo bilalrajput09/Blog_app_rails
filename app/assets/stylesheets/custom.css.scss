@@ -65,7 +65,7 @@ strong {
 
 .comments_container {
   list-style: none;
-  margin-top: 4em;
+  margin-top: 2em;
 }
 
 .form_container {
@@ -90,6 +90,11 @@ strong {
   padding: 1em;
 }
 
-.form_container button {
-  background-color: antiquewhite;
+.like-btn {
+  border-radius: 10px;
+  padding: 0.5em 2em;
+}
+
+.like-btn:hover {
+  background-color: azure;
 }

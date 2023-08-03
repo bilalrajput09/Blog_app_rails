@@ -12,14 +12,18 @@
             <p>Comments: <%= @post.comments_counter %></p>
             <p>Likes: <%= @post.likes_counter %></p>
         </div>
+        <%= form_with model: @like, url: user_post_likes_path(user_id: @post.user.id,
+        post_id: @post.id), method: :post do |f|%>
+            <%= f.submit "Like", class: "like-btn" %>
+        <% end %>
         <ul class="comments_container">
             <%= render @post.return_5_recent_comments%>
         </ul>
 
         <br>
             <%= form_with model: @comment, url: user_post_comments_path(user_id: @post.user.id,post_id: @post.id), method: :post do |f|%>
-                <%= f.text_field :comment %>
-                <%= f.submit "Add comment" %>
+                <%= f.text_field :comment, class: "like-btn" %>
+                <%= f.submit "Add comment", class: "like-btn" %>
             <% end %>
         <br>
 
