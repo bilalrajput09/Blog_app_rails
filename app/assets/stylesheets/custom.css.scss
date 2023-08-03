@@ -65,5 +65,36 @@ strong {
 
 .comments_container {
   list-style: none;
-  margin-top: 4em;
+  margin-top: 2em;
+}
+
+.form_container {
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.form_container input {
+  font-size: 18px;
+  padding: 1em;
+}
+
+.form_container label {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.form_container textarea {
+  font-size: 18px;
+  padding: 1em;
+}
+
+.like-btn {
+  border-radius: 10px;
+  padding: 0.5em 2em;
+}
+
+.like-btn:hover {
+  background-color: azure;
 }
