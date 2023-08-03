@@ -1,12 +1,10 @@
 class LikesController < ApplicationController
+  def create
+    @like = Like.new(author_id: params[:user_id], post_id: params[:post_id])
 
-    def create 
+    return unless @like.save
 
-        @like = Like.new(author_id: params[:user_id], post_id: params[:post_id])
-
-        if @like.save 
-            flash[:notice] = "Liked"
-            redirect_to user_path(params[:user_id])
-        end
-    end
+    flash[:notice] = 'Liked'
+    redirect_to user_path(params[:user_id])
+  end
 end

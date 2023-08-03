@@ -7,12 +7,11 @@ Rails.application.routes.draw do
   root 'users#index'
   resources :users, only: %i[show index] do
     resources :posts, only: %i[index show new create] do
-      resources :comments, only: %i[index new create] 
+      resources :comments, only: %i[index new create]
       resources :likes, only: %i[create]
     end
   end
   # get '/users/:user_id/posts', to: 'posts#index', as: 'user_posts'
   # get '/users/:user_id/posts/:id', to: 'posts#show', as: 'user_post'
   # get '/users/:user_id/posts/new', to: 'posts#new', as: 'new_post'
-
 end

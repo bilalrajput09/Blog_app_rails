@@ -9,17 +9,16 @@ class PostsController < ApplicationController
     @comments = @post.comments
   end
 
-  def new
-  end
+  def new; end
 
-  def create 
+  def create
     @post = Post.new(title: params[:title], text: params[:description], author_id: params[:user_id])
     if @post.save
-      flash[:notice] = "Your post successfully created"
+      flash[:notice] = 'Your post successfully created'
       redirect_to user_path
     else
-      flash.now = "Something wrong with your input"
-      render "new"
+      flash.now = 'Something wrong with your input'
+      render 'new'
     end
   end
 end
