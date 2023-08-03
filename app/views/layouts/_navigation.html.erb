@@ -5,6 +5,9 @@
                 <%= link_to "Users", users_path%>
             </li>
             <li class="nav_items">
+                <%= link_to "Create post", new_user_post_path(user_id: current_user)%>
+            </li>
+            <li class="nav_items">
                 <%= link_to "Login", '#'%>
             </li>
         </ul>
