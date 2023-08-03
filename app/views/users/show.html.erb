@@ -1,1 +1,9 @@
-<h1>You are in show page of users_view</h1>
+<%= render @user %>
+<p>
+    <strong class="bio">Details: </strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat odio harum reiciendis magnam, architecto voluptates ex doloremque ea optio quibusdam rem repudiandae est, fuga mollitia at sequi repellendus illum vitae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione libero consequuntur nobis natus quia suscipit magni, dolores molestiae iusto reprehenderit repellat saepe itaque, quam sequi voluptate fugit distinctio minima aspernatur?
+</p>
+<%= render @user.recent_3_posts %>
+<div class="See_all_post_btn">
+    <%= link_to "See all posts", user_posts_path(@user.id)%>
+</div>
+

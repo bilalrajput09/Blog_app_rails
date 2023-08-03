@@ -1,1 +1,23 @@
-<h1>You are in show page of posts_show</h1>
+<article class="main_page_conatiner">
+    <div class="user_details_container">
+        <h1>
+            Post #<%= @post.id%> by <%= @user.name%>
+        </h1>
+        <p>
+        <strong class="bio">Title: </strong> <%= @post.title %>
+        <br>
+        <strong class="bio">Text: </strong> <%= @post.text %> Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, expedita. Cupiditate dolores distinctio libero, amet, optio excepturi maxime consectetur aliquid reprehenderit soluta neque consequatur id asperiores eligendi ut unde sunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat iusto vitae repudiandae cum mollitia eum accusamus distinctio porro alias voluptate voluptatem ducimus, consectetur maiores non quisquam a odit dignissimos blanditiis.
+        </p>
+        <div  class="comments_likes_container">
+            <p>Comments: <%= @post.comments_counter %></p>
+            <p>Likes: <%= @post.likes_counter %></p>
+        </div>
+        <ul class="comments_container">
+            <%= render @post.return_5_recent_comments%>
+        </ul>
+    </div>
+    
+</article>
+
+
+
