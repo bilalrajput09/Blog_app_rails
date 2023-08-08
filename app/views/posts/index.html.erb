@@ -1,2 +1,2 @@
 <%= render @user%>
-<%= render @posts%>
+<%= render @posts.includes(:user, :comments, :likes) %>
