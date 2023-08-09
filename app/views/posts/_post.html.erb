@@ -4,12 +4,12 @@
             Post #<%= post.id%>
         </h1>
         <p>
-        <strong class="bio">Title: </strong> <%= post.text %>
+        <strong class="bio">Title: </strong> <%= post.title %>
         <br>
         <strong class="bio">Text: </strong> <%= post.text %>
         </p>
         <div class="see_profile_container">
-            <%= link_to "See post", user_post_path(user_id: post.user.id, id: post.id)%>
+            <%= link_to "See post", user_post_path(user_id: post.user.id, id: post.id), class: "post_item"%>
         </div>
         <div  class="comments_likes_container">
             <p>Comments: <%= post.comments_counter %></p>

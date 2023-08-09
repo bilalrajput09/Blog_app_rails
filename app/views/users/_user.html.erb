@@ -1,6 +1,6 @@
 <article class="main_page_conatiner">
     <div class="image_container">
-        <%= image_tag "image_1.jpg", height: 200 %>
+        <%= image_tag "image_1.jpg", height: 200, id: user.id%>
     </div>
     <div class="user_details_container">
         <h1>
@@ -11,7 +11,7 @@
         </p>
         <div class="see_profile_container">
             <p>Number of posts: <%= user.posts.length %></p>
-            <%= link_to "See profile", user_path(user.id)%>
+            <%= link_to "See profile", user_path(user.id), id: "link-#{user.id}"%>
         </div>
     </div>
 </article>
