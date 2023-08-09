@@ -28,7 +28,6 @@ RSpec.describe User, type: :feature do
     second_post.save!
   end
 
-
   it 'Checks the name of users' do
     visit root_path
     expect(page).to have_content(person1.name)
