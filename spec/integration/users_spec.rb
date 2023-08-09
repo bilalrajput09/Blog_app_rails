@@ -38,7 +38,6 @@ RSpec.describe User, type: :feature do
     visit root_path
     expect(page).to have_content(person1.posts.count)
     expect(page).to have_content(person2.posts.count)
-
   end
 
   it 'Checks if the profile image successfully rendered for each user' do

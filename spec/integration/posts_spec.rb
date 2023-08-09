@@ -85,10 +85,10 @@ RSpec.describe User, type: :feature do
   end
 
   it "Will check when I click on user's post it redirects to post's show page" do
-      visit "/users/#{person1.id}/posts"
-      second_post_link = find('.post_item', match: :first, wait: 10)
-      second_post_link.click
-      expect(page).to have_current_path("#{Capybara.app_host}/users/#{person1.id}/posts/#{second_post.id}")
+    visit "/users/#{person1.id}/posts"
+    second_post_link = find('.post_item', match: :first, wait: 10)
+    second_post_link.click
+    expect(page).to have_current_path("#{Capybara.app_host}/users/#{person1.id}/posts/#{second_post.id}")
   end
 
   describe 'Post show page' do
