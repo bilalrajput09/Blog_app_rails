@@ -19,6 +19,6 @@ class Post < ApplicationRecord
   end
 
   def return_5_recent_comments
-    comments.last(5).reverse
+    comments.includes(:user).last(5).reverse
   end
 end
