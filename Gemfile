@@ -71,8 +71,8 @@ end
 group :test do
   # The RSpec testing framework
   gem 'capybara'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
