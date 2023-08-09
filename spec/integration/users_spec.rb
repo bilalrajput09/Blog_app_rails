@@ -32,16 +32,20 @@ RSpec.describe User, type: :feature do
   it 'Checks the name of users' do
     visit root_path
     expect(page).to have_content(person1.name)
+    expect(page).to have_content(person2.name)
   end
 
   it 'Checks for the number of posts each user has' do
     visit root_path
     expect(page).to have_content(person1.posts.count)
+    expect(page).to have_content(person2.posts.count)
+
   end
 
   it 'Checks if the profile image successfully rendered for each user' do
     visit root_path
     expect(page).to have_css("img##{person1.id}")
+    expect(page).to have_css("img##{person2.id}")
   end
 
   it "Checks if we click on the user I am redirected to user's show page" do

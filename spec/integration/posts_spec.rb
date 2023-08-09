@@ -84,11 +84,11 @@ RSpec.describe User, type: :feature do
     expect(page).to have_content(first_post.likes_counter)
   end
 
-  it "Will check if I click on post it redirects to post's show page" do
-    visit "/users/#{person1.id}/posts"
-    second_post_link = find('.post_item', match: :first)
-    second_post_link.click
-    expect(page).to have_content(second_post.title)
+  it "Will check when I click on user's post it redirects to post's show page" do
+      visit "/users/#{person1.id}/posts"
+      second_post_link = find('.post_item', match: :first, wait: 10)
+      second_post_link.click
+      expect(page).to have_current_path("#{Capybara.app_host}/users/#{person1.id}/posts/#{second_post.id}")
   end
 
   describe 'Post show page' do
