@@ -4,12 +4,13 @@ AllCops:
     - 'Guardfile'
     - 'Rakefile'
     - 'node_modules/**/*'
-    - "bin/bundle"
-    - "bin/importmap"
-    - "bin/rails"
-    - "bin/rake"
-    - "bin/setup"
-    - "db/schema.rb"
+    - 'bin/bundle'
+    - 'bin/importmap'
+    - 'bin/rails'
+    - 'bin/rake'
+    - 'bin/setup'
+    - 'db/schema.rb'
+    - 'config/initializers/devise.rb'
 
   DisplayCopNames: true
 
