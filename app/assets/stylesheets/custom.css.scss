@@ -92,7 +92,19 @@ strong {
 
 .like-btn {
   border-radius: 10px;
-  padding: 0.5em 2em;
+  padding: 0.5em 1em;
+  margin-bottom: 10px;
+}
+
+.comment_item {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.comment_item button {
+  border-radius: 10px;
+  padding: 0.2em 0.5em;
 }
 
 .like-btn:hover {

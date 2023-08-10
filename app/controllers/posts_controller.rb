@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.paginate(page: params[:page], per_page: 3)
@@ -10,6 +11,13 @@ class PostsController < ApplicationController
   end
 
   def new; end
+
+  def destroy
+    post = Post.find(params[:post_id])
+    post.destroy 
+    flash[:notice] = "The post has been successfully deleted"
+    redirect_to user_path(params[:user_id])
+  end
 
   def create
     @post = Post.new(title: params[:title], text: params[:description], author_id: params[:user_id])
