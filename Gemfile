@@ -27,6 +27,7 @@ gem 'turbo-rails'
 gem 'stimulus-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
+gem 'devise'
 gem 'jbuilder'
 gem 'rack', '2.2.8'
 gem 'will_paginate', '~> 4.0'
