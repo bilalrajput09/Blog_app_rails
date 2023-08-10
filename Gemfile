@@ -31,7 +31,7 @@ gem 'devise'
 gem 'jbuilder'
 gem 'rack', '2.2.8'
 gem 'will_paginate', '~> 4.0'
-
+gem 'cancancan'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
