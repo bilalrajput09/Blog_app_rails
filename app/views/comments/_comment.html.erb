@@ -1,1 +1,13 @@
-<li id="comment-<%=comment.id%>"> <strong><%= comment.user.name %></strong>: <%= comment.text%></li>
+<li id="comment-<%=comment.id%>" class="comment_item"> 
+    <div>
+        <strong>
+        <%= comment.user.name %>
+        </strong>: 
+        <%= comment.text%> 
+    </div>
+
+    <% if can? :manage, @post %>
+        <%= button_to "Delete",  user_post_comment_path(user_id: comment.user.id, post_id: comment.post.id, comment_id: comment.id), method: :delete, class: "like-btn" %>
+    <% end %>
+
+</li>
