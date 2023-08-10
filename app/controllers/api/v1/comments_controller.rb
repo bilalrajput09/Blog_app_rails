@@ -19,9 +19,9 @@ module Api
                 post = Post.find(params[:post_id])
 
                 comment = Comment.new(
-                    text: request.body('text')
-                    author_id: user.id
-                    post_id: post.id
+                    text: request.body('text'),
+                    author_id: user.id,
+                    post_id: post.id,
                 )
 
                 if comment.save 
