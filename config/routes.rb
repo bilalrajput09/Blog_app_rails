@@ -5,6 +5,16 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
+  namespace :api do
+    namespace :v1 do
+      resources :users, only: %i[index create] do
+        resources :posts, only: [:index] do
+          resources :comments, only: %i[index create]
+        end
+      end
+    end
+  end
+
   root 'users#index'
   resources :users, only: %i[show index] do
     resources :posts, only: %i[index show new create destroy] do

@@ -27,6 +27,7 @@ gem 'turbo-rails'
 gem 'stimulus-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
+gem 'active_model_serializers', '~> 0.10.13'
 gem 'cancancan'
 gem 'devise'
 gem 'jbuilder'

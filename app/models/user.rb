@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  before_create :generate_api_token
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -18,5 +20,11 @@ class User < ApplicationRecord
 
   def recent_3_posts
     posts.last(3).reverse
+  end
+
+  private
+
+  def generate_api_token
+    self.api_token = SecureRandom.hex(16)
   end
 end
