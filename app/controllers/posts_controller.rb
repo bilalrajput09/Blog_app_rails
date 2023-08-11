@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: %i[create destroy]
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.paginate(page: params[:page], per_page: 3)
