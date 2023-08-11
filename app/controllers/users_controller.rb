@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  protect_from_forgery with: :exception
   def index
     @users = User.all
   end

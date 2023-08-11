@@ -12,14 +12,15 @@ module Api
       end
 
       def create
-        # Assumes that you have already have generated token so it will come in the post request from api,
-        token = request.headers('X-token')
+        # Assumes that you have already have generated
+        # api_token which should come when you create user using api-endpoint,
+        token = request.headers[:api_token]
         user = User.find_by(api_token: token)
+        puts user
         post = Post.find(params[:post_id])
-
         comment = Comment.new(
-          text: request.body('text'),
-          author_id: user.id,
+          text: params[:text],
+          author_id: params[:user_id],
           post_id: post.id
         )
 
@@ -29,7 +30,7 @@ module Api
           render json: { errors: comment.errors.full_messages }, status: :bad_request
         end
       rescue StandardError => e
-        render json: { error: e.messages }, status: :bad_request
+        render json: { errors: e.message }, status: :bad_request
       end
     end
   end
